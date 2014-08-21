@@ -19,3 +19,20 @@ in gfxd-base : `docker build -t gfxd-base .`
 in gfxd-locator: `docker build -t gfxd-locator .`
 
 in gfxd-server: `docker build -t gfxd-server .`
+
+
+Running the GemFire XD Cluster:
+===============================
+Once the images are built, boot up the cluster using the fig.yml configuration provided in cluster-fig folder:
+    
+    fig up -d
+
+Once the cluster comes up a good way to verify this will be to run the bash on the base image:
+    
+    docker run -it bijukunjummen/gfxd-base /bin/bash
+
+Then on the bash prompt:
+    
+    gfxd
+    connect client '192.168.58.103:1527';
+    
