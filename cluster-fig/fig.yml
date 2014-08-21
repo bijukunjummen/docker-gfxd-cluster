@@ -1,0 +1,24 @@
+locator:
+  image: bijukunjummen/gfxd-locator
+  ports:
+    - "10334"
+    - "1527:1527"
+    - "7075:7075"
+
+server1:
+  image: bijukunjummen/gfxd-server
+  ports:
+    - "1528:1528"
+  links:
+    - locator
+  environment: 
+   - CLIENT_PORT=1528
+
+server2:
+  image: bijukunjummen/gfxd-server
+  ports:
+    - "1529:1529"
+  links:
+    - locator
+  environment: 
+   - CLIENT_PORT=1529   
