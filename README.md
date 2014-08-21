@@ -15,5 +15,7 @@ Building the Docker images:
 To build the entire structure yourself, first place a GemFire XD rpm named to gfxd-1.0.rpm, downloadable from https://network.pivotal.io/products/pivotal-hd to the gfxd-base folder and run commands in the following sequence:
 
 in gfxd-base : `docker build -t gfxd-base .`
+
 in gfxd-locator: `docker build -t gfxd-locator .`
+
 in gfxd-server: `docker build -t gfxd-server .`
