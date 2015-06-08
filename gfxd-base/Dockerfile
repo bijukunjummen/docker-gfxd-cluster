@@ -5,4 +5,4 @@ RUN wget --progress=dot:giga -O /tmp/jdk.rpm --no-cookies --no-check-certificate
 RUN rpm -ivh /tmp/jdk.rpm && rm /tmp/jdk.rpm
 RUN alternatives --install /usr/bin/java java /usr/java/default/bin/java 20000
 COPY gfxd-1.0.rpm /tmp/
-RUN yum -y install /tmp/gfxd-1.0.rpm
+RUN yum -y install /tmp/gfxd-1.0.rpm && rm /tmp/fgxd-1.0.rpm
